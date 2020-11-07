@@ -1,0 +1,38 @@
+/*
+#FFC819 yellow
+#FD8B7C pink
+#FFC2B1 light pink
+#C1564B dark pink
+*/
+body{
+    background-color:white;
+}
+.navbar{
+    background-color:#C1564B;
+}
+.inputArea{
+    margin-top: 10px;
+    margin-bottom:10px;
+    padding:10px;
+}
+.outputArea{
+    color:white;
+    background-color: #FD8B7C;
+    margin-top: 10px;
+    margin-bottom:10px;
+    padding:10px;
+}
+.treeArea{
+    background-color:#FFC819;
+    margin-top: 10px;
+    margin-bottom:10px;
+    padding:10px;
+}
+a{
+    color: white;
+}
+.uneditable-input:focus {   
+    border-color: rgba(126, 239, 104, 0.8)!important;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(126, 239, 104, 0.6)!important;
+    outline: 0 none!important;
+  }
