@@ -12,6 +12,26 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
 
     <title>Huffman Encoding</title>
+    
+
+        <!-- fontawesome -->
+        <script src="https://kit.fontawesome.com/2cdeb7e939.js"></script>
+        <!-- libraries -->
+        <script src="js/libraries/jquery-2.1.3.min.js"></script>
+        <script src="js/libraries/bootstrap.min.js"></script>
+        <script src="js/libraries/jit.js"></script>
+        <script src="js/libraries/binary_tree_visualizer.js"></script>
+        <script src="js/libraries/priority-queue.js"></script>
+
+        <!-- huffman scripts -->
+        <script src="huffman/yaprak_dugumleri_olustur.js"></script>
+        <script src="huffman/agac_olustur.js"></script>
+        <script src="huffman/yol_olustur.js"></script>
+        <script src="huffman/encode.js"></script>
+        <script src="huffman/input.js"></script>
+        <script>
+            /*https://www.youtube.com/watch?v=Oql5JQBN0Zs*/
+        </script>
 </head>
 
 <body>
@@ -27,37 +47,46 @@
 
         <!-- Gövde-->
         <div class="text-center">
-            <p class="m-4">Burada gereken açıklamalar olacak</p>
-
+            <div>
+                <p class="m-4">Burada gereken açıklamalar olacak</p>
+            </div>
             <!-- Metin ve Ağaç-->
             <div class="row">
 
                 <!-- Input & Output-->
-                <div class="col-md-6">
-                    <form>
-                        <div class="form-row inputArea">
-                            <textarea id="huffman_input" class="form-control" style="width:100%; height:100px;"
+                <div class="col-md-4">
+                    <div class="inputArea">
+                        <form>
+                            <textarea id="input" class="form-control"
                                 placeholder="Sıkıştırılacak metni giriniz..."></textarea>
-                        </div>
-                    </form>
+                            <input type="button" class="btn btn-warning m-3" onclick="inputu_yorumla(input)" value="Encode"/>
+                        </form>
+                    </div>
+                    <div class="">
+                        <div class="outputArea border rounded-lg">
+                            <div id="kodlanmis_string">
+                                <p id="output">output ise burada olacak</p>
+                            </div>
 
-                    <div class="outputArea border rounded-lg">
-                        output ise burada olacak
+                        </div>
                     </div>
                     <div class="m-3">
-                        Sıkıştırma Oranı: %30
+                        <p> Sıkıştırma Oranı: <span id="yuzdelik"></span></p>
+                        
                     </div>
                 </div>
 
                 <!-- Ağaç-->
-                <div class="col-md-6 treeArea border rounded-lg">
-                    burada ağaç çizilecek
+                <div class="col-md-8 treeArea border rounded-lg">
+                    <div id="agac">
+                        <i>Type to see graph...</i>
+                    </div>
                 </div>
             </div>
         </div>
 
         <!-- Frekans Tablosu-->
-        <div class="m-5 text-center">
+        <div class="mt-5 text-center">
             <h6>Frekans Tablosu</h6>
             <table class="table">
                 <thead>
@@ -100,27 +129,6 @@
                 </tbody>
             </table>
         </div>
-
-
-
-        <!-- libraries -->
-        <script src="js/libraries/jquery-2.1.3.min.js"></script>
-        <script src="js/libraries/bootstrap.min.js"></script>
-        <script src="js/libraries/jit.js"></script>
-        <script src="js/libraries/binary_tree_visualizer.js"></script>
-        <script src="js/libraries/priority-queue.js"></script>
-
-        <!-- huffman scripts -->
-        <script src="js/huffman/build_character_nodes.js"></script>
-        <script src="js/huffman/build_tree.js"></script>
-        <script src="js/huffman/build_path.js"></script>
-        <script src="js/huffman/encode_string.js"></script>
-
-        <!-- text scripts -->
-        <script src="js/text/input.js"></script>
-
-        <!-- gui scripts -->
-        <script src="js/gui/index.js"></script>
     </div>
 </body>
 
