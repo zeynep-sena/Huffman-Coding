@@ -5,7 +5,7 @@ function yaprak_dugumleri_olustur(input){
 		var bulundu = false;
 		
         for(j = 0; j < yaprak_dugumler.length && !bulundu; j++){
-			if(yaprak_dugumler[j].name == input.charAt(i)){
+			if(yaprak_dugumler[j].isim == input.charAt(i)){
 				yaprak_dugumler[j].frekans++;
 				bulundu = true;
 			}
