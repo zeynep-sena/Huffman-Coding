@@ -7,7 +7,7 @@ function yol_olustur(agac, yollar, suanki_dugum, dugumun_yolu){
 
 	
 	if(suanki_dugum.cocuk.length == 0){
-		yollar[suanki_dugum.name] = dugumun_yolu != "" ? dugumun_yolu : "0";
+		yollar[suanki_dugum.isim] = dugumun_yolu != "" ? dugumun_yolu : "0";
 		return;
 	}
 

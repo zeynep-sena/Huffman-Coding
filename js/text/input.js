@@ -15,6 +15,7 @@ function inputu_yorumla(input){
 
     var yollar = {};    
     yol_olustur(agac, yollar); // her karakterin yolunu atıyor (a = 0, b = 11, h = 10)
+ 
     var bit_string = encode(input, yollar); //(000111110)
 
     sonuc.kodlanmis_string = bit_string;
