@@ -48,7 +48,7 @@ function visualize(binary_tree_json, offset_fullscreen){
 	// Create a new ST instance
 	var st = new $jit.ST({
 		/* id of viz container element */
-		injectInto: 'huffman_graph',
+		injectInto: 'agac',
 
 		/* Set duration for the animation. */
 		duration: 200,
