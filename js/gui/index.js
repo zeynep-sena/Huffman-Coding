@@ -3,7 +3,7 @@ document.getElementById("encode-button").onclick = function(){ //encode button i
     sonuc = enableEncode();
     document.getElementById("output").innerHTML = sonuc.kodlanmis_string;
     document.getElementById("yuzdelik").innerHTML = sonuc.yuzdelik;
-    agacıCizdir();
+    agacıCizdir(sonuc);
 };
 
 
@@ -11,6 +11,7 @@ function enableEncode(){ //encode tıklandığında ağaç arraylerini oluşturu
     return inputu_yorumla(document.getElementById("input").value);
 }
 
-function agacıCizdir(){ //agac ögesinin içerisine gerekli şekli çizdirir.
+function agacıCizdir(sonuc){ //agac ögesinin içerisine gerekli şekli çizdirir.
     document.getElementById("agac").getElementsByTagName("i")[0].style.display = "none"; //information divini gizler
+    visualize(sonuc.agac);
 }
