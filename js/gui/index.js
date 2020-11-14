@@ -13,5 +13,5 @@ function enableEncode(){ //encode tıklandığında ağaç arraylerini oluşturu
 
 function agacıCizdir(sonuc){ //agac ögesinin içerisine gerekli şekli çizdirir.
     document.getElementById("agac").getElementsByTagName("i")[0].style.display = "none"; //information divini gizler
-    visualize(sonuc.agac);
+    visualize(sonuc.agac, true);
 }

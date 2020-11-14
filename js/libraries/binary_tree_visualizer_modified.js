@@ -1,14 +1,18 @@
 /*
 Library extracted from GitHub repositiory: https://github.com/Morphage/BinaryTreeVisualizer
+
 The MIT License (MIT)
+
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
 to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the Software is
 furnished to do so, subject to the following conditions:
+
 The above copyright notice and this permission notice shall be included in
 all copies or substantial portions of the Software.
+
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -75,7 +79,7 @@ function visualize(binary_tree_json, offset_fullscreen){
 			width: 60,
 			dim: 40,
 			type: 'circle',
-			color: '#81868f',
+			color: '#FFC819', //yellow | #81868f
 			overridable: true
 		},
 		
@@ -95,7 +99,7 @@ function visualize(binary_tree_json, offset_fullscreen){
 			style.width = 60 + 'px';
 			style.height = 17 + 'px';
 			style.cursor = 'default';
-			style.color = '#fff';
+			style.color = '#FD8B7C'; // pink | fff
 			style.fontSize = '1.1em';
 			style.textAlign= 'center';
 			style.paddingTop = '3px';
@@ -112,7 +116,7 @@ function visualize(binary_tree_json, offset_fullscreen){
 			//add some color to the nodes in the path between the
 			//root node and the selected node.
 			if (node.selected) {
-				node.data.$color = "#81868f";
+				node.data.$color = "#FFC819"; //yellow | #81868f
 			}
 			else {
 				delete node.data.$color;
@@ -123,7 +127,7 @@ function visualize(binary_tree_json, offset_fullscreen){
 					node.eachSubnode(function(n) { count++; });
 					//assign a node color based on
 					//how many children it has
-					node.data.$color = ['#434a54', '#baa', '#caa', '#daa', '#eaa', '#faa'][count];
+					node.data.$color = ['#434a54', '#baa', '#caa', '#daa', '#eaa', '#faa'][count]; // anlamadımm??
 				}
 			}
 		},
@@ -133,7 +137,7 @@ function visualize(binary_tree_json, offset_fullscreen){
 		 * with a dollar sign will override the Edge global style properties.
 		 */
 		onBeforePlotLine: function(adj){
-			adj.data.$color = "#afb4bd";
+			adj.data.$color = "#fff"; // | #afb4bd
 			adj.data.$lineWidth = 3;
 		}
 	});
