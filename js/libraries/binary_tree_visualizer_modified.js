@@ -104,9 +104,7 @@ function visualize(binary_tree_json, offset_fullscreen){
 			style.textAlign= 'center';
 			style.paddingTop = '3px';
 			style.marginTop = '-4px';
-			style.top = 40 + 'px';
 			style.fontWeight = 'bold';
-			console.log(label.style);
 		},
 		
 		// This method is called right before plotting
