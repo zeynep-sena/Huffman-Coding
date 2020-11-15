@@ -5,8 +5,8 @@ function yaprak_dugumleri_olustur(input){
 		var bulundu = false;
 		
         for(j = 0; j < yaprak_dugumler.length && !bulundu; j++){
-			if(yaprak_dugumler[j].isim == input.charAt(i)){
-				yaprak_dugumler[j].frekans++;
+			if(yaprak_dugumler[j].name == input.charAt(i)){
+				yaprak_dugumler[j].frequency++;
 				bulundu = true;
 			}
 
@@ -16,9 +16,9 @@ function yaprak_dugumleri_olustur(input){
 		if(!bulundu){
 			yaprak_dugumler[yaprak_dugumler.length] = {
 				"id": "0", //agac_olustur.js'de değişiyor
-				"isim": input.charAt(i),
-				"cocuk": [], //agac_olustur.js'de atanıyor
-				"frekans": 1,
+				"name": input.charAt(i),
+				"children": [], //agac_olustur.js'de atanıyor
+				"frequency": 1,
 			};
 		}
 	}
