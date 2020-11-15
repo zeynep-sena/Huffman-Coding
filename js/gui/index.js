@@ -1,5 +1,8 @@
 var sonuc; //ağaç ve kodlanmış metin sonuç içerisinde saklanır
+var count = 0; //tıklanma sayısı
 document.getElementById("encode-button").onclick = function(){ //encode button için click eventi -> anonymous function
+    count++;
+    if(count > 1){document.getElementById("div").innerHTML = '<div id="agac" style="height:500px;"><i style="line-height:500px;">Type to see the graph...</i></div>';}
     sonuc = enableEncode();
     document.getElementById("output").innerHTML = sonuc.kodlanmis_string;
     document.getElementById("yuzdelik").innerHTML = sonuc.yuzdelik;
