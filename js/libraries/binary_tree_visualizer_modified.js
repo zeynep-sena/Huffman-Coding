@@ -121,7 +121,7 @@ function visualize(binary_tree_json, offset_fullscreen){
 			else {
 				delete node.data.$color;
 				//if the node belongs to the last plotted level
-				if(!node.anySubnode("exist")) {
+				if(!node.anySubnode("exist")) { //buraya girmiyor
 					//count children number
 					var count = 0;
 					node.eachSubnode(function(n) { count++; });
@@ -153,7 +153,7 @@ function visualize(binary_tree_json, offset_fullscreen){
 
 	/* Remove null nodes from the visualization. */
 	st.graph.eachNode(function(node) {
-		if (node.name == "null") {
+		if (node.name == "null") {	// buraya da girmiyor
 			st.op.removeNode(node.id, {
 				type: 'fade:seq',
 				hideLabels: false,
