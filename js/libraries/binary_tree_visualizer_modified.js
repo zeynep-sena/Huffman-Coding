@@ -104,7 +104,9 @@ function visualize(binary_tree_json, offset_fullscreen){
 			style.textAlign= 'center';
 			style.paddingTop = '3px';
 			style.marginTop = '-4px';
+			style.top = 40 + 'px';
 			style.fontWeight = 'bold';
+			console.log(label.style);
 		},
 		
 		// This method is called right before plotting
@@ -121,10 +123,10 @@ function visualize(binary_tree_json, offset_fullscreen){
 			else {
 				delete node.data.$color;
 				//if the node belongs to the last plotted level
-				if(!node.anySubnode("exist")) { //buraya girmiyor
+				if(!node.anySubnode("exist")) { 
 					//count children number
 					var count = 0;
-					node.eachSubnode(function(n) { count++; });
+					node.eachSubnode(function(n) { count++; });//buraya girmiyor
 					//assign a node color based on
 					//how many children it has
 					node.data.$color = ['#434a54', '#baa', '#caa', '#daa', '#eaa', '#faa'][count]; // anlamadımm??
