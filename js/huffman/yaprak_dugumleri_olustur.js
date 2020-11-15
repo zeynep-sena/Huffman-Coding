@@ -22,6 +22,8 @@ function yaprak_dugumleri_olustur(input){
 			};
 		}
 	}
-	
+	for(i = 0; i < yaprak_dugumler.length; i++){ //tüm frekanslar için bir sütun tablo oluşturur.
+		frekansTablosuOlustur(yaprak_dugumler[i].name, yaprak_dugumler[i].frequency);
+	}
 	return yaprak_dugumler;
 }

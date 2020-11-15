@@ -2,6 +2,17 @@ var sonuc; //ağaç ve kodlanmış metin sonuç içerisinde saklanır
 var count = 0; //tıklanma sayısı
 document.getElementById("encode-button").onclick = function(){ //encode button için click eventi -> anonymous function
     count++;
+    
+    //Her girdi için frekans tablosunun içini yeniler ve temizler.
+    if(document.getElementById("harfler").hasChildNodes){
+        harfler = document.getElementById("harfler");
+        harfler.innerHTML = '';
+    }
+    if(document.getElementById("frekanslar").hasChildNodes){
+        frekanslar = document.getElementById("frekanslar");
+        frekanslar.innerHTML = '';
+    }
+    
     if(count > 1){document.getElementById("div").innerHTML = '<div id="agac" style="height:500px;"><i style="line-height:500px;">Type to see the graph...</i></div>';}
     sonuc = enableEncode();
     document.getElementById("output").innerHTML = sonuc.kodlanmis_string;
@@ -22,9 +33,14 @@ function agacıCizdir(sonuc){ //agac ögesinin içerisine gerekli şekli çizdir
         document.getElementById("agac-canvaswidget").parentNode.removeChild(canvas);
     }
     visualize(sonuc.agac, true);
-    // Animate tree building
-    document.getElementById("#agac-canvaswidget").fadeTo(0, 0);
-    timeout_to_show = setTimeout(function(){
-        document.getElementById("#agac-canvaswidget").fadeTo(0, 1);
-    }, 550);
+}
+
+function frekansTablosuOlustur(name, frequency){ //htmldeki tabloları girilen parametrelere göre dom objeleri oluşturup doldurur. yaprak_dugumleri_olustur dosyasının içinde çalışır.
+    var harf = document.createElement("th");
+    harf.innerHTML = name;
+    document.getElementById("harfler").appendChild(harf);
+
+    var frekans = document.createElement("td");
+    frekans.innerHTML = frequency;
+    document.getElementById("frekanslar").appendChild(frekans);
 }
