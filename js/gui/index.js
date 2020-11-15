@@ -13,6 +13,11 @@ function enableEncode(){ //encode tıklandığında ağaç arraylerini oluşturu
 
 function agacıCizdir(sonuc){ //agac ögesinin içerisine gerekli şekli çizdirir.
     document.getElementById("agac").getElementsByTagName("i")[0].style.display = "none"; //information divini gizler
+
+    if(document.getElementById("agac-canvaswidget")){ //eğer alanda varsa önceki ağacı siler
+        canvas = document.getElementById("agac-canvaswidget");
+        document.getElementById("agac-canvaswidget").parentNode.removeChild(canvas);
+    }
     visualize(sonuc.agac, true);
     // Animate tree building
     document.getElementById("#agac-canvaswidget").fadeTo(0, 0);
