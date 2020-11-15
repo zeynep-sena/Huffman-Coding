@@ -81,7 +81,7 @@ function visualize(binary_tree_json, offset_fullscreen){
 		
 		Edge: {
 			type: 'line',
-			overridable: true
+			overridable: true,
 		},
 		
 		// This method is called on DOM label creation.

@@ -63,7 +63,7 @@ function visualize(binary_tree_json, offset_fullscreen){
 		constrained: false,
 		
 		offsetX: 0,
-		offsetY: offset_fullscreen === true ? 400 : 200,
+		offsetY: offset_fullscreen === true ? 100 : 200,
 
 		/* Enable panning. */
 		Navigation: {
@@ -79,13 +79,13 @@ function visualize(binary_tree_json, offset_fullscreen){
 			width: 60,
 			dim: 40,
 			type: 'circle',
-			color: '#FFC819', //yellow | #81868f
+			color: '#81868f',//'#FFC819', //yellow | #81868f
 			overridable: true
 		},
 		
 		Edge: {
 			type: 'line',
-			overridable: true
+			overridable: true,
 		},
 		
 		// This method is called on DOM label creation.
@@ -116,7 +116,7 @@ function visualize(binary_tree_json, offset_fullscreen){
 			//add some color to the nodes in the path between the
 			//root node and the selected node.
 			if (node.selected) {
-				node.data.$color = "#FFC819"; //yellow | #81868f
+				node.data.$color = "#fffefa"; //yellow | #81868f
 			}
 			else {
 				delete node.data.$color;

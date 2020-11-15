@@ -14,4 +14,9 @@ function enableEncode(){ //encode tıklandığında ağaç arraylerini oluşturu
 function agacıCizdir(sonuc){ //agac ögesinin içerisine gerekli şekli çizdirir.
     document.getElementById("agac").getElementsByTagName("i")[0].style.display = "none"; //information divini gizler
     visualize(sonuc.agac, true);
+    // Animate tree building
+    document.getElementById("#agac-canvaswidget").fadeTo(0, 0);
+    timeout_to_show = setTimeout(function(){
+        document.getElementById("#agac-canvaswidget").fadeTo(0, 1);
+    }, 550);
 }

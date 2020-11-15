@@ -22,7 +22,7 @@ function agac_olustur(yaprak_dugumler){
 		yeni_dugum.children[1].id = id_sayaci++;
 		
 		yeni_dugum.frequency = yeni_dugum.children[0].frequency + yeni_dugum.children[1].frequency;
-		//yeni_dugum.isim = yeni_dugum.frequency;
+		yeni_dugum.name = yeni_dugum.frequency;
 		queue.queue(yeni_dugum);
 		
 	}
