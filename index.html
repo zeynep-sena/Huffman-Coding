@@ -30,9 +30,12 @@
             <div>
                 <p class="m-4">
                     Huffman Encoding büyük boyutlu bilgilerin kayıp olmadan (lossless) sıkıştırılmasını
-                    sağlayan bir metottur. Bu uygulama ise input alanına girilen bir textin Huffman kodlaması kullanılarak yüzde
-                    kaç oranında sıkıştırılabildiğini hesaplayan, kodlanan texti ve oluşturulan ağacı görebileceğiniz bir front-end
-                    uygulamasıdır. İstanbul Üniversitesi - Cerrahpaşa öğrencileri tarafından Algoritma Analizi dersi için
+                    sağlayan bir metottur. Bu uygulama ise input alanına girilen bir textin Huffman kodlaması
+                    kullanılarak yüzde
+                    kaç oranında sıkıştırılabildiğini hesaplayan, kodlanan texti ve oluşturulan ağacı görebileceğiniz
+                    bir front-end
+                    uygulamasıdır. İstanbul Üniversitesi - Cerrahpaşa öğrencileri tarafından Algoritma Analizi dersi
+                    için
                     oluşturulmuştur.
                 </p>
             </div>
@@ -48,29 +51,32 @@
                             <button id="encode-button" type="button" class="btn btn-warning m-3">Encode</button>
                         </form>
                     </div>
-                    <div class="">
-                        <div class="outputArea border rounded-lg">
-                            <div id="kodlanmis_string">
-                                <p id="output">Encoded Text</p>
-                            </div>
-
+                </div>
+                <div class="col-md-8">
+                    <div class="outputArea border rounded-lg">
+                        <div id="kodlanmis_string">
+                            <p id="output" style="word-break:break-all;">Encoded Text</p>
                         </div>
+
                     </div>
+
                     <div class="m-3">
                         <p> Sıkıştırma Oranı: <span id="yuzdelik"></span></p>
-                        
+
                     </div>
                 </div>
 
-                <!-- Ağaç-->
-                <div class="col-md-8 treeArea border rounded-lg" id="div">
+            </div>
+
+            <!-- Ağaç-->
+            <div class="row">
+                <div class="col-md-12 treeArea border rounded-lg" id="div">
                     <div id="agac" style="height:400px;">
                         <i style="line-height:500px;">Type to see the graph...</i>
                     </div>
                 </div>
             </div>
         </div>
-
         <!-- Frekans Tablosu-->
         <div class="mt-5 text-center">
             <h6>Frekans Tablosu</h6>
@@ -86,6 +92,8 @@
             </table>
         </div>
     </div>
+
+
 
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/2cdeb7e939.js"></script>
