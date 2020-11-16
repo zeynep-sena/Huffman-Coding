@@ -26,6 +26,6 @@ function agac_olustur(yaprak_dugumler){
 		queue.queue(yeni_dugum);
 		
 	}
-	//....
+	
 	return queue.dequeue();
 }
